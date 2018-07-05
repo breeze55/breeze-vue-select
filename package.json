@@ -1,19 +1,24 @@
 {
   "name": "breeze-vue-select",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue custom select components,support search function.",
-  "main": "ex/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open --hot --config ./build/webpack.dev.config.js",
-    "build": "webpack --progress --hide-modules --config ./build/webpack.prod.config.js"
-  },
+  "private": false,
+  "main": "dist/index.js",
   "keywords": [
     "vue",
     "select"
   ],
   "author": "breeze",
   "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --open --hot --config ./build/webpack.dev.config.js",
+    "build": "webpack --progress --hide-modules --config ./build/webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengxiong10/vue2-datepicker.git"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

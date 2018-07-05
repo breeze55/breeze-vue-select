@@ -66,7 +66,7 @@ export default {
   props: {
     data: {
       type: Array,
-      default: []
+      default: () => []
     },
     width: {
       type: Number,
