@@ -36,9 +36,9 @@
                 :value="item.text"
                 v-model="selectedOptions"
                 @change="selectItems">
-              <label :for="item.id">{{ item.text }}</label>
+              <label :for="item.id" :title="item.text">{{ item.text }}</label>
             </span>
-            <span v-else>
+            <span v-else :title="item.text">
               {{ item.text }}
             </span>
         </div>
@@ -261,6 +261,7 @@ export default {
   background: #fff;
   border-radius: 3px;
   z-index: 100;
+  overflow: hidden;
 }
 .breeze-select-box>.list>.search {
   width: 90%;
@@ -269,11 +270,19 @@ export default {
   padding: 2px 5px;
   box-sizing: border-box;
   display: block;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.breeze-select-box>.list>.search:focus {
+  box-shadow:0px 0px 5px #b8daff;
+  border: 1px solid #b8daff;
 }
 .breeze-select-box>.list>.inner {
+  margin-right: -15px;
   padding: 5px;
   max-height: 200px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .breeze-select-box>.list .item {
   max-width: 280px;
