@@ -14,13 +14,13 @@ npm install breeze-vue-select --save
 import it into your project.
 
 ```js
-import BreezeSelectTemplate from 'BreezeSelect'
+import BreezeSelectTemplate from 'breeze-vue-select'
 ```
 
 ## Usage
 
 ```js
-import BreezeSelectTemplate from 'BreezeSelect'
+import BreezeSelectTemplate from 'breeze-vue-select'
 export default {
   data() {
     return {

@@ -10,7 +10,8 @@
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
     <div class="list"
-      v-show="isShow">
+      v-show="isShow"
+      :style="{width: width + 'px'}">
       <input class="search" type="text"
         v-if="search"
         v-model="searchText"
@@ -125,7 +126,11 @@ export default {
             this.selectedAllStatus = false;
           }
         } else {
-          this.selectedText = this.placeholder;
+          if (this.selectedOptions.length !== 0) {
+            this.selectedText = this.selectedOptions[0]
+          } else {
+            this.selectedText = this.placeholder;
+          }
         }
       }
     }
@@ -260,7 +265,7 @@ export default {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   background: #fff;
   border-radius: 3px;
-  z-index: 100;
+  z-index: 2147483647;
   overflow: hidden;
 }
 .breeze-select-box>.list>.search {
