@@ -213,7 +213,15 @@ export default {
           arr.push(obj);
         }
       });
-      this.items = arr;
+      if (arr.length == 0) {
+        this.items = [{
+          text: this.searchText,
+          value: this.searchText,
+          selectStatus: false
+        }]
+      } else {
+        this.items = arr;
+      }
     }
   }
 }
